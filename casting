@@ -1,0 +1,28 @@
+MyFloatValue = 9.82
+print(type(MyFloatValue))
+MyFloatValue2 = int(MyFloatValue)
+print(type(MyFloatValue2))
+print(MyFloatValue2)
+year = int(input("Enter the current year"))
+age = int(input("What age will you be at the end of this year?")) # Note the int() cast on the input
+print("You were born in", year-age)
+
+marsbar = 1
+cokecan = 1.5
+crispbag = 0.8
+teacup = 2
+slicepan = 3.5
+
+total = marsbar*5 + cokecan*4 + crispbag*3 + teacup*2 + slicepan
+print(total)
+
+numbr1 = int(input("Enter first number: "))
+numbr2 = input("Enter second number: ")
+numbr2 = int(numbr2)
+Sum = numbr1 + numbr2
+print(numbr1, "+", numbr2, "=", Sum)
+
+tempF = int(input("Enter the degrees in Farenheight. "))
+tempC = ((tempF-32)*5/9)
+tempC = str(round(tempC, 2))
+print("The temperature is", tempC)
