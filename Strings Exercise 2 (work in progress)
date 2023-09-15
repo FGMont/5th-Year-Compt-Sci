@@ -1,0 +1,53 @@
+# Program to demonstrate basic slicing
+
+# Initialise the string
+pangram = "The quick brown fox jumps over the lazy dog!"
+#          01234567890123456789012345678901234567890123
+
+# Extract from index 1 up to but NOT including index 5
+print(pangram[1:5]) # "he q"
+
+# Extract from the index 17 up to but NOT including index 19
+print(pangram[17:19]) # ox
+
+print(pangram[:19])   # "The quick brown fox"
+print(pangram[20:26]) # "jumps"
+print(pangram[26:])   # "over the lazy dog!"
+print(pangram[:])     # "The quick brown fox jumps over the lazy dog"
+# name = "Mary"
+# print(name[4]) The problem is indexing starts at 0. M0 A1 R2 Y3. there is no 4
+# name = "Mary"
+# name[3] = "k" This is a false statement. name[3] = "y"
+
+word1 = "Leaving"
+word2 = "Certificate"
+word3 = "Computer"
+word4 = "Science"
+subjectName = word1 + word2 + word3 + word4
+print(subjectName)
+# My prediction is this won't work
+# My prediction was half correct. The text printed without issue but had no space
+
+pangram = "The quick brown fox jumps over the lazy dog!"
+#          01234567890123456789012345678901234567890123
+print(pangram[:3] + pangram[16:])
+# My prediction is this code will run smoothly
+# My prediction was correct
+
+noun = input("Enter a singular noun: ")
+print("The plural of "+noun+" is "+noun+"s")
+# My prediction is this code will not work since the "+" should be a ","
+# My prediction was incorrect
+
+alNum = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+#                  1         2         3         4         5         6
+#        01234567890123456789012345678901234567890123456789012345678901
+print(alNum[3])     #d
+print(alNum[52:62]) #0123456789
+print(alNum[51:62]) #Z0123456789
+print(alNum[26:53]) #ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+print(alNum[0:25])  #abcdefghijklmnopqrstuvwxyz
+print(alNum[1])     #b
+print(alNum[5])     #f
+print(alNum[26:52]) #ABCDEFGHIJKLMNOPQRSTUVWXYZ
+print(alNum[26])    #A
