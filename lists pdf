@@ -1,0 +1,68 @@
+for x in "alphabet":
+    print(x)
+My_list = ["Monday", "Tuesday", "Wednesday"]
+for x in My_list:
+    print(x)
+b= ["Hello","world","I","need",'some','other','words',21,35.789]
+
+First_item = b[0]
+Third_item = b[2]
+Num_items_in_lst = len(b)
+Last_item = b[Num_items_in_lst -1]
+Last_item = b[-1]
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])#returns items at index 2,3 and 4
+
+print(thislist[:5])#prints everything from the start to position 5
+print(thislist[2:]) # take everything from position 2 to the end
+
+print(thislist[:]) # print the entire list
+print(thislist[-4:-1]) #print from orange up to but not including mango
+
+b = "Hello, World!"
+print(b[2:10:2]) # return every second character starting at 2 up to but not including the 10th
+print(b[2:10:3]) # return every third character starting at 2 up to but not including the 10th
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3) #prints ["a","b”,”c”,1,2,3]
+
+c=["hello"]
+output_list = c*2
+print(output_list) # outputs ["hello","hello"]
+
+My_string = 'hello'
+#Make My_string uppercase and store it in a new variable:
+My_string_upper = My_string.upper()
+print(My_string_upper) # output is 'HELLO'
+#Make My_string uppercase and store it in the old variable
+My_string = My_string.upper()
+print(My_string) # output is 'HELLO'
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+#Change more than one item at a time
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+txt = "The best things in life are free!"
+if "free" in txt:
+    print("Yes, 'free' is present.\n")
+lst=[ 1, 6, 3, 5, 3, 4 ]
+if 7 in lst:
+    print("7 is in lst")
+else:
+    print("7 is not in lst")
+    
+    txt = "The best things in life are free!"
+if "expensive" not in txt:
+    print("No, 'expensive' is NOT present.\n")
+lst=[ 1, 6, 3, 5, 3, 4 ]
+if 7 not in lst:
+    print("7 is not in lst")
+else:
+    print("7 is in lst")
