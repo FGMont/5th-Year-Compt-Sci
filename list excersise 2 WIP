@@ -1,0 +1,24 @@
+sport1 = "Gaelic"
+sport2 = "Football"
+sport3 = "Basketball"
+sport4 = "Golf"
+userfav = input("Name your favourite sport ")
+SportList1 = [sport1, sport2, sport3, sport4]
+if userfav == SportList1[0]:
+    print(SportList1)
+elif userfav == sport2:
+    print(SportList1)
+elif userfav == sport3:
+    print(SportList1)
+elif userfav == sport4:
+    print(SportList1)
+else:
+    SportList1.append(userfav)
+    print(SportList1)
+    
+    subjectlist = ["English", "Mathematics", "French", "Science","History","Computer Science"]
+print(subjectlist)
+userinput = input("What subject from the list above do you not like? ")
+if userinput == subjectlist[0]:
+    subjectlist.remove(userinput)
+print(subjectlist)
