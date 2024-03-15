@@ -1,0 +1,52 @@
+#Exercise 1: Write a python function to take in two numbers add them together
+#and returns the total
+nmbr1 = input("Please input a number >  ")
+nmbr1 = int(nmbr1)
+nmbr2 = input("Please input another number >  ")
+nmbr2 = int(nmbr2)
+
+def TwoNumberAdder(a,b):
+    ans = a + b
+    return ans
+TwoNumberAdder(nmbr1,nmbr2)
+#Exercise 2: Write a python function to take in a string and add ‘un’ to
+#the start of it and return the modified string.
+#Example, if the user enters necessary – the function would return unnecessary
+string = input("Please input any word or string >  ")
+
+def Uninator(s):
+    prefix = "Un"
+    s = prefix+s
+Uninator(string)
+#Exercise 3: Write a Python function to check if a string is a palindrome or not
+word = input("Please input any word or string without spaces >  ")
+
+def PalindromeChecker(w):
+    wreverse = w[::-1]
+    if w == wreverse:
+        Palindrome = 1
+    else:
+        Palindrome = 0
+PalindromeChecker(word)
+#Exercise 4: Write a Python function to take in a list and count all the
+#even and odd numbers. It should return the number of even numbers, the number of
+#odd numbers, the totals of the odd and even numbers and the averages of the odd
+#and even numbers
+list1 = []
+even = []
+odd = []
+items = input("Please input a number to add to the number list. When you are finished, type 'END' or 'end' >  ")
+while items != 'end' and items != 'END':
+    items = int(items)
+    list1.append(items)
+    items = input("Please input a number to add to the number list >  ")
+def evenorodd(l,o,e):
+    for each in l:
+        if each % 2 == 0:
+            e.append(each)
+        else:
+            o.append(each)
+    total = len(e) + len(o)
+    return total
+total = evenorodd(list1,odd,even)
+print("The number of even numbers you have input are",len(even),". The number of odd numbers
