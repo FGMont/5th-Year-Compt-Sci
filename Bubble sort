@@ -1,0 +1,30 @@
+#Bubble sort
+L = []
+lc = input("Please input numbers to be addded to the number list. Type 'stop' when finished. > ")
+
+while lc != 'stop':
+    if lc.isdigit():
+        L.append(lc)
+        lc = input("Please input your next number. > ")
+    else:
+        print("Please input a number.")
+        lc = input("Please input your next number. > ")
+n = len(L) - 1
+count = 0
+while count != n:
+    n1 = 0
+    n2 = n1 + 1
+    while n2 <= n:
+        if L[n1] > L[n2]:
+            n3 = L[n1]
+            L.insert(n2 + 1,n3)
+            L.remove(n3)
+            n1 = n1 + 1
+            n2 = n2 + 1
+            print(L)
+        else:
+            n1 = n1 + 1
+            n2 = n2 + 1
+            print(L)
+        print(n,count)
+    count = count + 1
