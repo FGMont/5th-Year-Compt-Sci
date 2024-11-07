@@ -1,0 +1,71 @@
+//Q1
+let numb1 = 7;
+let numb2 = 8.5;
+let numb3 = 9;
+
+console.log(numb1,numb2,numb3);
+
+numb1 = numb1 + numb2;
+numb2 = numb2 + numb3;
+
+console.log(numb1,numb2,numb3);
+
+//Q2
+let n = 7;
+let tenth = n+1;
+let unit = n+2;
+
+console.log(n,tenth,unit);
+
+//Q3
+let r = 3;
+let PI = 3.14;
+let answer = PI*r ** 2;
+
+console.log(answer);
+
+//Q4
+let base = 12;
+let h = 10;
+let AoT = base * h /2;
+
+console.log(AoT);
+
+//Q5
+let N = 3;
+let squared = N ** 2;
+let cubed = N ** 3;
+let power_of_four = N ** 4;
+
+console.log(N,"\n",squared,"\n",cubed,"\n",power_of_four);
+
+//Q6
+let height = 200;
+let height_in_inches = height/2.54;
+let height_in_feet = height_in_inches/12;
+
+console.log(height_in_feet);
+
+//Q7
+let radius = 16;
+let volume = PI*radius ** 3;
+volume = volume * 1.33333333333;
+
+console.log(volume);
+
+//8
+let Name = 'John';
+let age = '20';
+let current_year = 2024;
+let year_of_birth = current_year - age;
+let year_100 = year_of_birth + 100;
+
+console.log('Hello', Name,', you will turn 100 in the year', year_100);
+
+//Q9
+let mass = 10;
+let c = 10 ** 8;
+c = c * 3;
+let formula_E = mass * c ** 2;
+
+console.log(formula_E)
