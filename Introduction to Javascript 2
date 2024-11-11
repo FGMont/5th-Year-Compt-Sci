@@ -1,0 +1,124 @@
+//Consttruct loops that accomplish the following tasks:
+//Q1
+for (let i = 0; i < 21; i = i + 1){
+    console.log(i);
+}
+
+//Q2
+for (let x = 3; x < 30; x = x + 1){
+    if (x%2 == 1){
+        console.log(x);
+    }
+}
+
+//Q3
+for (let y = 12; y > -15; y = y - 1){
+    if (y%2 == 0){
+        console.log(y);
+    }
+}
+
+//Q4
+for (let a = 50; a > 20; a = a - 1){
+    if (a%3 == 0){
+        console.log(a);
+    }
+}
+
+//Use if-else statements to help with the following:
+//Q5
+let n = 10
+if (n > 0){
+    console.log(n,'is a positive number');
+}
+else if (n == 0){
+    console.log(n,'is neither positive nor negative');
+}
+else{
+    console.log(n,'is a negative number');
+}
+
+//Q6
+if (n%2 == 1){
+    console.log(n,'is an odd number');
+}
+else if (n == 0){
+    console.log(n,'is neither odd nor even');
+}
+else{
+    console.log(n,'is an odd number');
+}
+
+//Q7
+let n2 = 30;
+if (n > n2){
+    console.log(n,'is bigger than',n2,'and hence is the greater of the two');
+}
+else{
+    console.log(n2,'is bigger than',n,'and hence is the greater of the two');
+}
+
+//Q8
+let alphabet = ['A','B','C','D','E','F'];
+let grade = 7;
+ if (grade >= 6){
+    letter_grade = alphabet[10%grade];
+}
+else{
+    letter_grade = 'F';
+}
+
+console.log(letter_grade);
+
+//Q9
+let Age = 19;
+if(Age <12){
+    let price = 5;
+}
+else if (Age<18){
+    price = 10;
+}
+else if (Age>60){
+    price = 15;
+}
+else{
+    price = 20
+}
+
+console.log('Since you are',Age,'years old, your ticket price is',price);
+
+//Write a function to do each of the following
+//Q1
+let mins = 321;
+function minutesToHours(m){
+    let hours = m / 60;
+    let minutes = m%60;
+    console.log(m, 'is', hours.toFixed(0),'hours and', minutes,'minutes.');
+}
+
+let finaltime = minutesToHours(mins)
+
+//Q2
+let A = 2
+let B = 8
+let C = 12
+let D = 3
+
+function averageOf4Numbers(a,b,c,d){
+    let sumOf4Numbers = a + b + c + d;
+    let average = sumOf4Numbers / 4;
+    return average;
+}
+
+console.log(averageOf4Numbers(A,B,C,D));
+
+//Q3
+let KM = 400
+let lit = 10
+function getGasolineAmount(j,k){
+    let roundTrip = j * 2;
+    let gasamount = roundTrip / k;
+    return gasamount;
+}
+
+console.log('You would need',getGasolineAmount(KM,lit),'litres of Gasoline.');
