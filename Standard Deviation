@@ -1,0 +1,50 @@
+//Getting the mean of the list
+function GettingTheMean(v){
+    let sum = 0;
+    for(let i = 0; i < v.length; i = i +1){
+        sum = sum + v[i];
+    }
+    let result = sum/v.length;
+    return result;
+}
+
+
+/*
+xi / v[i] = each value in the list 'values'
+μ / m = mean
+N / n = number of values in the list 'values'
+*/
+
+function StandardDeviation(m,n,v){
+    let sum = 0;
+    for(let i = 0; i < v.length; i = i +1){
+        v[i] = v[i] - m;
+        v[i] = v[i] **2;
+    }
+    for(let i = 0; i < v.length; i = i +1){
+        sum = sum + v[i];
+    }
+    result = sum / (n - 1);
+    result = result ** 0.5;
+    return result;
+}
+
+//a)
+let valuesA = [20,21,19,22,21,20,19,20,21,20];
+let meanA = GettingTheMean(valuesA);
+console.log(StandardDeviation(meanA,valuesA.length,valuesA));
+
+//b)
+let valuesB = [303,299,306,298,304,307,299,302,305,299,300];
+let meanB = GettingTheMean(valuesB);
+console.log(StandardDeviation(meanB,valuesB.length,valuesB));
+
+//c)
+let valuesC = [15.3,14.9,15.1,14.8,14.7,15.1,14.8,15.0,15.0];
+let meanC = GettingTheMean(valuesC);
+console.log(StandardDeviation(meanC,valuesC.length,valuesC));
+
+//d)
+let valuesD = [87,89,84,88,89,87,86,87,86,87];
+let meanD = GettingTheMean(valuesD);
+console.log(StandardDeviation(meanD,valuesD.length,valuesD));
