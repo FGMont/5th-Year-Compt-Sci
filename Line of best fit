@@ -1,0 +1,106 @@
+/* PLAN
+Step 1- Create a code that finds the mean of a list of x 
+and the mean of y                                                 ✔
+Step 2- Take the mean of y away from all y values and      
+the mean of x away from all the x values                          ✔
+Step 3- Multiply each pair of results by eachother                ✔
+Step 4- Add up all results of your modified list                  ✔
+Step 5- Add up all new x values squared                           ✔
+Step 6- Divide results from step 4 by results of step 5           ✔
+
+This will give us our slope
+
+Step 7- use formula >  b = mean of y - (slope * mean of x)
+example:
+
+b = y intercept (aka where x = 0)
+
+b = ȳ - m * x̄
+b = 7 -(-1.1 x 6.4)
+b = 14.04
+
+so then the equation of the line is:
+
+y = mx + c
+  (to find y = slope multiplied by x + y intercept)
+y = -1.1x + 14 (round number)
+
+Now we can find the equation of the line of best fit
+*/
+
+//List of points
+let points_dictionary = {'x values':[8,2,11,6,5,4,12,9,6,1],'y values':[3,10,3,6,8,12,1,4,9,14]};
+
+//Step 1
+function GettingTheMean(v){
+    let sum = 0;
+    for(let i = 0; i < v.length; i = i +1){
+        sum = sum + v[i];
+    }
+    let result = sum/v.length;
+    return result;
+}
+
+let mean_of_x = GettingTheMean(points_dictionary['x values']);
+console.log(mean_of_x);
+
+let mean_of_y = GettingTheMean(points_dictionary['y values']);
+console.log(mean_of_y);
+
+//Step 2
+function StandardDeviation(m,v){
+    for(let i = 0; i < v.length; i = i +1){
+        v[i] = v[i] - m;
+    }
+    return v;
+}
+
+points_dictionary['x values'] = StandardDeviation(mean_of_x,points_dictionary['x values']);
+points_dictionary['y values'] = StandardDeviation(mean_of_y,points_dictionary['y values']);
+
+console.log(points_dictionary);
+
+//Step 3
+function MultiplyingTheResults(v,v1){
+    let sum = 0
+    for(let i = 0; i < v.length; i = i +1){
+        
+        let multiplied = v[i] * v1[i];
+        sum = sum + multiplied;
+    }
+    return sum;
+}
+
+let MultipliedPairs = MultiplyingTheResults(points_dictionary['x values'],points_dictionary['y values']);
+console.log(MultipliedPairs);
+
+//Step 4, Step 5
+
+function FindingLowerValueSum(v){
+    let sum = 0
+    for(let i = 0; i < v.length; i = i +1){
+        let l = v[i] ** 2;
+        sum = sum + l;
+    }
+    return sum
+}
+let LowerValue = FindingLowerValueSum(points_dictionary['x values']);
+console.log(LowerValue);
+
+//Step 6
+let slope = MultipliedPairs / LowerValue;
+console.log(slope);
+
+/*Step 7
+b = ȳ - m * x̄ */
+
+let y_intercept = mean_of_y - slope * mean_of_x;
+console.log(y_intercept);
+
+//y = mx + c
+
+function FormulaOfTheLine(m,x,c){
+    let y = m * x + c;
+    return y;
+}
+
